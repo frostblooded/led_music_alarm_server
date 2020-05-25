@@ -1,7 +1,37 @@
 <form action="/" method="POST">
-  <input type="text" name="username" />
-  <input type="text" name="password" />
-  <input type="text" name="client_id" />
-  <input type="text" name="client_secret" />
-  <input type="submit" value="Save" />
+  <div>
+    <p>Username</p>
+    <input type="text" name="username" />
+  </div>
+  <div>
+    <p>Password</p>
+    <input type="text" name="password" />
+  </div>
+  <div>
+    <p>Client ID</p>
+    <input type="text" name="client_id" />
+  </div>
+  <div>
+    <p>Client secret</p>
+    <input type="text" name="client_secret" />
+  </div>
+
+  <input type="submit" value="Save credentials" />
+</form>
+
+<form action="/alarm" method="POST">
+  <div>
+    <p>Hours</p>
+    <input type="text" name="hours" />
+  </div>
+  <div>
+    <p>Minutes</p>
+    <input type="text" name="minutes" />
+  </div>
+  <div>
+    <p>Song/Playlist</p>
+    <input type="text" name="spotify_uri" />
+  </div>
+
+  <input type="submit" value="Save alarm" />
 </form>
