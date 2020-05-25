@@ -11,5 +11,23 @@ def parse_request():
         return render_template('index.html')
 
     elif request.method == 'POST':
-        print(request.form['test'])
-        return "Thanks for submitting"
+        data = request.form
+
+        text = '''[spotify]
+username = {}
+password = {}
+cliend_id = {}
+client_secret = {}
+private_session = true
+
+[mpd]
+enabled = true
+        '''.format(data['username'],
+                   data['password'],
+                   data['client_id'],
+                   data['client_secret'])
+
+        text_file = open("/etc/mopidy/mopidy.conf", "w")
+        text_file.write(text)
+        text_file.close()
+        return "Thank you!"
