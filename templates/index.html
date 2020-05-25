@@ -1,3 +1,9 @@
+{% if flash %}
+<div id="flash" style="color: green; font-weight: bold;">
+  {{ flash }}
+</div>
+{% endif %}
+
 <form action="/" method="POST">
   <div>
     <p>Username</p>
