@@ -4,26 +4,35 @@
 </div>
 {% endif %}
 
+<p>
+  Please visit <a href="https://mopidy.com/ext/spotify/">this link</a> and click
+  "Authenticate Mopidy with Spotify". Then, after authenticating with spotify,
+  copy the client_id and client_secret tokens and paste them here below.
+</p>
+
 <form action="/" method="POST">
   <div>
-    <p>Username</p>
+    <p>Spotify username</p>
     <input type="text" name="username" />
   </div>
   <div>
-    <p>Password</p>
+    <p>Spotify password</p>
     <input type="text" name="password" />
   </div>
   <div>
-    <p>Client ID</p>
+    <p>Spotify client ID</p>
     <input type="text" name="client_id" />
   </div>
   <div>
-    <p>Client secret</p>
+    <p>Spotify client secret</p>
     <input type="text" name="client_secret" />
   </div>
 
   <input type="submit" value="Save credentials" />
 </form>
+
+<hr />
+<p>Wake me up at:</p>
 
 <form action="/alarm" method="POST">
   <div>
